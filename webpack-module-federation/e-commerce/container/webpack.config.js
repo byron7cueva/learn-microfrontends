@@ -14,7 +14,8 @@ module.exports = {
       name: 'container',
       remotes: {
         // 'name_module@url_remote_entry'
-        products: 'products@http://localhost:8081/remoteEntry.js'
+        products: 'products@http://localhost:8081/remoteEntry.js',
+        cart: 'cart@http://localhost:8082/remoteEntry.js'
       }
     })
   ]
