@@ -5,7 +5,7 @@ module.exports = {
   mode: 'development',
   devServer: {
     port: 8081,
-  },
+  }, 
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html'
@@ -18,6 +18,8 @@ module.exports = {
       exposes: {
         './ProductsIndex': './src/index'
       },
+      // Share dependency
+      shared: ['faker'],
     })
   ],
 };
