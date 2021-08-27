@@ -11,12 +11,17 @@ module.exports = {
       template: './public/index.html'
     }),
     new ModuleFederationPlugin({
-      name: 'cart',
+      name: 'mycart',
       filename: 'remoteEntry.js',
       exposes: {
-        './CartShow': './src/index'
+        './CartShow': './src/bootstrap'
       },
       shared: ['faker'],
+      /*shared: {
+        faker: {
+          singleton: true,
+        },
+      }*/
     }),
   ]
 };

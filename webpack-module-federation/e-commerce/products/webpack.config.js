@@ -16,10 +16,17 @@ module.exports = {
       filename: 'remoteEntry.js',
       // modules or files to expose
       exposes: {
-        './ProductsIndex': './src/index'
+        './ProductsIndex': './src/bootstrap'
       },
       // Share dependency
+      // Cuando difiere en las versiones mayor, se descarga las dos versiones
       shared: ['faker'],
+      // Cuando difiere en las versiones mayor, se descarga la version mas actual
+      /*shared: {
+        faker: {
+          singleton: true,
+        },
+      }*/
     })
   ],
 };
