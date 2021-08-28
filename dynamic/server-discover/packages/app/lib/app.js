@@ -26,6 +26,7 @@ Lo haremos de forma dinámica, en función del contenido real de la variable de 
 app.use((req, res) => {
   const [prefix] = Object.keys(lookup).filter((m) => req.path.startsWith(m));
 
+  // Cuando no existe una url a un path
   if (!prefix) {
     return res.status(404).send("Nothing found.");
   }
@@ -34,6 +35,7 @@ app.use((req, res) => {
 
   console.log('Going to target...', prefix, target);
 
+  // Redireccionando a la url del micro frontend
   return proxy.web(req, res, { target }, e => {
     console.error(e);
     res.status(500).send('Something went wrong...');
