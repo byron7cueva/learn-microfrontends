@@ -1,5 +1,7 @@
 # Static - Pipeline
 
+Solución de micro frontend integrada en tiempo de compilación
+
 ## Steps
 Follow these steps to implement the same from scratch.
 
