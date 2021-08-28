@@ -1,0 +1,36 @@
+{
+  "name": "@aom/app",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "byron7cueva <byron7cueva@gmail.com>",
+  "license": "ISC",
+  "main": "lib/app.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byron7cueva/learn-microfrontends.git"
+  },
+  "scripts": {
+    "app": "node lib/app.js"
+  },
+  "bugs": {
+    "url": "https://github.com/byron7cueva/learn-microfrontends/issues"
+  },
+  "homepage": "https://github.com/byron7cueva/learn-microfrontends#readme",
+  "dependencies": {
+    "@aom/mife-1": "^0.0.0",
+    "@aom/mife-2": "^0.0.0",
+    "express": "^4.17.1",
+    "pug": "^3.0.2"
+  }
+}
