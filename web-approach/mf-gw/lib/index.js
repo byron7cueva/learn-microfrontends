@@ -1,3 +1,9 @@
+/*
+Una forma de implementar la puerta de enlace es reenviar / a alguna micro interfaz, mientras se procesa cada solicitud en función del prefijo de la ruta.
+Esto establece el requisito en cada micro interfaz de usar un determinado prefijo y ceñirse a él.
+Si no se identifica ningún prefijo conocido, responderemos con un estado HTTP 404
+*/
+
 const express = require("express");
 const { createProxyMiddleware } = require("http-proxy-middleware");
 
