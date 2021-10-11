@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="./product-page.css">
 <h1 id="store">The Model Store</h1>
-<esi:include src="/mf-blue/basket-info?sku=<%= current.sku %>" />
+<esi:include src="/store/basket-info?sku=<%= current.sku %>" />
 <div id="image">
   <div>
     <img src="./images/<%= current.image %>" alt="<%= current.name %>" />
@@ -18,5 +18,5 @@
     </a>
   <% }); %>
 </div>
-<esi:include src="/mf-blue/buy-button?sku=<%= current.sku %>" />
+<esi:include src="/store/buy-button?sku=<%= current.sku %>" />
 <esi:include src="/mf-green/recommendations?sku=<%= current.sku %>" />

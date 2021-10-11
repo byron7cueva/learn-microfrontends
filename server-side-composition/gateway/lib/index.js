@@ -12,6 +12,7 @@ const host = `http://localhost:${port}`;
 
 /*
 Para simplificar, usaremos un conjunto estático de objetivos de micro frontend
+Configurar la URL base y restringir los hosts permitidos a los objetivos de micro frontend definidos
 */
 const targets = {
   "/products": "http://localhost:2001",
@@ -25,6 +26,7 @@ const esiConfig = {
     (prev, prefix) => [...prev, targets[prefix]],
     [host]
   ),
+  // Para evitar solicitudes de larga duración debido a referencias cíclicas, limitamos la profundidad máxima de reemplazos de marcadores de posición.
   maxDepth: 8,
   // Deshabilitar el almacenamiento en caché por completo
   cache: false,
@@ -166,7 +168,7 @@ Object.keys(targets).forEach((prefix) => {
 });
 
 app.get("/", (_, res) => {
-  res.redirect("/page/mf-red/product-page");
+  res.redirect("/page/products/product-page");
 });
 
 /**

@@ -22,6 +22,8 @@ app.use(express.static('public'));
 app.get("/recommendations", (req, res) => {
   const sku = req.query.sku || "porsche";
 
+  console.log(allRecommendations[sku]);
+
   res.render("recommendations", {
     recommendations: allRecommendations[sku] || allRecommendations.porsche,
   });
